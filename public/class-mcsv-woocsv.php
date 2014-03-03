@@ -33,7 +33,7 @@ class MCSV_WooCSV {
 	const VERSION = '1.0.0';
 
 	/**
-	 * @TODO - Rename "plugin-name" to the name your your plugin
+	 * @TODO - Rename "mcsv-woocsv" to the name your your plugin
 	 *
 	 * Unique identifier for your plugin.
 	 *
@@ -46,7 +46,7 @@ class MCSV_WooCSV {
 	 *
 	 * @var      string
 	 */
-	protected $plugin_slug = 'plugin-name';
+	protected $plugin_slug = 'mcsv-woocsv';
 
 	/**
 	 * Instance of this class.
