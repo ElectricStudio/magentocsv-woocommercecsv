@@ -22,7 +22,7 @@
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Domain Path:       /languages
- * GitHub Plugin URI: https://github.com/<owner>/<repo>
+ * GitHub Plugin URI: https://github.com/ElectricStudio/magentocsv-woocommercecsv
  */
 
 // If this file is called directly, abort.
@@ -37,10 +37,10 @@ if ( ! defined( 'WPINC' ) ) {
 /*
  * @TODO:
  *
- * - replace `class-plugin-name.php` with the name of the plugin's class file
+ * - replace `class-mcsv-woocsv.php` with the name of the plugin's class file
  *
  */
-require_once( plugin_dir_path( __FILE__ ) . 'public/class-plugin-name.php' );
+require_once( plugin_dir_path( __FILE__ ) . 'public/class-mcsv-woocsv.php' );
 
 /*
  * Register hooks that are fired when the plugin is activated or deactivated.
@@ -48,19 +48,19 @@ require_once( plugin_dir_path( __FILE__ ) . 'public/class-plugin-name.php' );
  *
  * @TODO:
  *
- * - replace Plugin_Name with the name of the class defined in
- *   `class-plugin-name.php`
+ * - replace MCSV_WooCSV with the name of the class defined in
+ *   `class-mcsv-woocsv.php`
  */
-register_activation_hook( __FILE__, array( 'Plugin_Name', 'activate' ) );
-register_deactivation_hook( __FILE__, array( 'Plugin_Name', 'deactivate' ) );
+register_activation_hook( __FILE__, array( 'MCSV_WooCSV', 'activate' ) );
+register_deactivation_hook( __FILE__, array( 'MCSV_WooCSV', 'deactivate' ) );
 
 /*
  * @TODO:
  *
- * - replace Plugin_Name with the name of the class defined in
- *   `class-plugin-name.php`
+ * - replace MCSV_WooCSV with the name of the class defined in
+ *   `class-mcsv-woocsv.php`
  */
-add_action( 'plugins_loaded', array( 'Plugin_Name', 'get_instance' ) );
+add_action( 'plugins_loaded', array( 'MCSV_WooCSV', 'get_instance' ) );
 
 /*----------------------------------------------------------------------------*
  * Dashboard and Administrative Functionality
@@ -69,9 +69,9 @@ add_action( 'plugins_loaded', array( 'Plugin_Name', 'get_instance' ) );
 /*
  * @TODO:
  *
- * - replace `class-plugin-name-admin.php` with the name of the plugin's admin file
- * - replace Plugin_Name_Admin with the name of the class defined in
- *   `class-plugin-name-admin.php`
+ * - replace `class-mcsv-woocsv-admin.php` with the name of the plugin's admin file
+ * - replace MCSV_WooCSV_Admin with the name of the class defined in
+ *   `class-mcsv-woocsv-admin.php`
  *
  * If you want to include Ajax within the dashboard, change the following
  * conditional to:
@@ -84,7 +84,7 @@ add_action( 'plugins_loaded', array( 'Plugin_Name', 'get_instance' ) );
  */
 if ( is_admin() && ( ! defined( 'DOING_AJAX' ) || ! DOING_AJAX ) ) {
 
-	require_once( plugin_dir_path( __FILE__ ) . 'admin/class-plugin-name-admin.php' );
-	add_action( 'plugins_loaded', array( 'Plugin_Name_Admin', 'get_instance' ) );
+	require_once( plugin_dir_path( __FILE__ ) . 'admin/class-mcsv-woocsv-admin.php' );
+	add_action( 'plugins_loaded', array( 'MCSV_WooCSV_Admin', 'get_instance' ) );
 
 }

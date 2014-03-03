@@ -14,14 +14,14 @@
  * public-facing side of the WordPress site.
  *
  * If you're interested in introducing administrative or dashboard
- * functionality, then refer to `class-plugin-name-admin.php`
+ * functionality, then refer to `class-mcsv-woocsv-admin.php`
  *
  * @TODO: Rename this class to a proper name for your plugin.
  *
- * @package Plugin_Name
+ * @package MCSV_WooCSV
  * @author  Electric Studio <hello@electricstudio.co.uk>
  */
-class Plugin_Name {
+class MCSV_WooCSV {
 
 	/**
 	 * Plugin version, used for cache-busting of style and script file references.

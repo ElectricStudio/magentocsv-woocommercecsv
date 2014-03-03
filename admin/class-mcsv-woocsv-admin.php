@@ -14,14 +14,14 @@
  * administrative side of the WordPress site.
  *
  * If you're interested in introducing public-facing
- * functionality, then refer to `class-plugin-name.php`
+ * functionality, then refer to `class-mcsv-woocsv.php`
  *
  * @TODO: Rename this class to a proper name for your plugin.
  *
- * @package Plugin_Name_Admin
+ * @package MCSV_WooCSV_Admin
  * @author  Electric Studio <hello@electricstudio.co.uk>
  */
-class Plugin_Name_Admin {
+class MCSV_WooCSV_Admin {
 
 	/**
 	 * Instance of this class.
@@ -63,10 +63,10 @@ class Plugin_Name_Admin {
 		 *
 		 * @TODO:
 		 *
-		 * - Rename "Plugin_Name" to the name of your initial plugin class
+		 * - Rename "MCSV_WooCSV" to the name of your initial plugin class
 		 *
 		 */
-		$plugin = Plugin_Name::get_instance();
+		$plugin = MCSV_WooCSV::get_instance();
 		$this->plugin_slug = $plugin->get_plugin_slug();
 
 		// Load admin style sheet and JavaScript.
@@ -122,7 +122,7 @@ class Plugin_Name_Admin {
 	 *
 	 * @TODO:
 	 *
-	 * - Rename "Plugin_Name" to the name your plugin
+	 * - Rename "MCSV_WooCSV" to the name your plugin
 	 *
 	 * @since     1.0.0
 	 *
@@ -136,7 +136,7 @@ class Plugin_Name_Admin {
 
 		$screen = get_current_screen();
 		if ( $this->plugin_screen_hook_suffix == $screen->id ) {
-			wp_enqueue_style( $this->plugin_slug .'-admin-styles', plugins_url( 'assets/css/admin.css', __FILE__ ), array(), Plugin_Name::VERSION );
+			wp_enqueue_style( $this->plugin_slug .'-admin-styles', plugins_url( 'assets/css/admin.css', __FILE__ ), array(), MCSV_WooCSV::VERSION );
 		}
 
 	}
@@ -146,7 +146,7 @@ class Plugin_Name_Admin {
 	 *
 	 * @TODO:
 	 *
-	 * - Rename "Plugin_Name" to the name your plugin
+	 * - Rename "MCSV_WooCSV" to the name your plugin
 	 *
 	 * @since     1.0.0
 	 *
@@ -160,7 +160,7 @@ class Plugin_Name_Admin {
 
 		$screen = get_current_screen();
 		if ( $this->plugin_screen_hook_suffix == $screen->id ) {
-			wp_enqueue_script( $this->plugin_slug . '-admin-script', plugins_url( 'assets/js/admin.js', __FILE__ ), array( 'jquery' ), Plugin_Name::VERSION );
+			wp_enqueue_script( $this->plugin_slug . '-admin-script', plugins_url( 'assets/js/admin.js', __FILE__ ), array( 'jquery' ), MCSV_WooCSV::VERSION );
 		}
 
 	}
